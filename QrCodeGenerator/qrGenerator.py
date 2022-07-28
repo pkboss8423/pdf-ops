@@ -6,7 +6,6 @@ import png
 from pyqrcode import QRCode
 import streamlit as st
 from PIL import Image
-import cv2
 
 from Utils.createFolder import create_images_folder
 
