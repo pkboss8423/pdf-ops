@@ -1,10 +1,11 @@
 import streamlit as st
+from QrCodeGenerator.qrGenerator import qr_generator
 from Utils.functionHelper import c_to_d, copypdf, delete_pg, extract_txt, extractImage, extractTables, merge, splitPdf
 
 st.title('Howdy!')
 
 # creating UI menu
-menu = ["PDF", "Coming Soon..."]
+menu = ["PDF", "Generate QR code"]
 choice = st.sidebar.selectbox("select for processing...", menu)
 
 # starting code for image
@@ -29,3 +30,9 @@ if choice == 'PDF':
         extractTables()
     if operations == "Split PDF":
         splitPdf()
+if choice=="Generate QR code":
+    inp = st.text_input(
+        "Enter URL")
+    if st.button("Start"):
+        
+        qr_generator(inp)
