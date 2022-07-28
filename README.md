@@ -2,7 +2,7 @@
 
 This app allows all pdf opertions to be executed in a single place.
 download the file , go to the folder , start cmd
-run - pip3 install -r requirements.txt
-      pip freeze > requirements.txt
+run - 1-pip3 install -r requirements.txt
+      2-pip freeze > requirements.txt
 finally run-
-streamlit run main.py
+3-streamlit run main.py
